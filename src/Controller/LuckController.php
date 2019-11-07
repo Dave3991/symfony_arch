@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckController
 {
+    /**
+     * @Route("/lucky/number")
+     */
     public function getLuckyNumber(): \Symfony\Component\HttpFoundation\Response
     {
         $number = 7;
