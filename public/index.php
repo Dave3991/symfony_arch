@@ -5,12 +5,15 @@ use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
 require dirname(__DIR__).'/config/bootstrap.php';
+\Tracy\Debugger::enable(\Tracy\Debugger::PRODUCTION,__DIR__ . '/../var/log/');
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
 
     Debug::enable();
+    \Tracy\Debugger::enable(\Tracy\Debugger::DEVELOPMENT,__DIR__ . '/../var/log/');
 }
+\Tracy\Debugger::$strictMode = true; // display all errors
 
 if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? $_ENV['TRUSTED_PROXIES'] ?? false) {
     Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL ^ Request::HEADER_X_FORWARDED_HOST);

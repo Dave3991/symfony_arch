@@ -117,6 +117,9 @@
     "psr/container": {
         "version": "1.0.x-dev"
     },
+    "psr/event-dispatcher": {
+        "version": "1.0.x-dev"
+    },
     "psr/link": {
         "version": "1.0.x-dev"
     },
@@ -468,6 +471,9 @@
     },
     "symfony/yaml": {
         "version": "5.0-dev"
+    },
+    "tracy/tracy": {
+        "version": "2.7-dev"
     },
     "twig/extra-bundle": {
         "version": "3.x-dev"
