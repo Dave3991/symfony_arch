@@ -3,13 +3,14 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class LuckController
+class LuckyController extends AbstractController
 {
     /**
-     * @Route("/lucky/number", name="lucky_number")
+     * @Route("lucky/number", name="lucky_number")
      */
     public function getLuckyNumber(): \Symfony\Component\HttpFoundation\Response
     {
@@ -20,7 +21,7 @@ class LuckController
     }
 
     /**
-     * @Route("/lucky/anotherNumber")
+     * @Route("lucky/anotherNumber")
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function getAnotherNumber(): \Symfony\Component\HttpFoundation\Response

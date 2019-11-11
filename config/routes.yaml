@@ -6,3 +6,4 @@
 controllers:
   resource: '../src/Controller/'
   type:     annotation
+#  prefix:   public
