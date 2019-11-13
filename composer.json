@@ -28,7 +28,8 @@
         "symfony/validator": "*",
         "symfony/web-link": "*",
         "symfony/yaml": "*",
-        "tracy/tracy": "2.7.*"
+        "tracy/tracy": "2.7.*",
+        "latte/latte": "2.5.*"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

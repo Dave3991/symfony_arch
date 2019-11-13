@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f093f0273ad95413000faba34ecb4228",
+    "content-hash": "6a429588d78cbef6c42214660e1f1173",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1197,17 +1197,90 @@
             "time": "2015-08-30T16:36:01+00:00"
         },
         {
+            "name": "latte/latte",
+            "version": "v2.5.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/latte.git",
+                "reference": "7ee09e0d1af1f1e3c7cc85fb5e742ab078f1b7a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/latte/zipball/7ee09e0d1af1f1e3c7cc85fb5e742ab078f1b7a6",
+                "reference": "7ee09e0d1af1f1e3c7cc85fb5e742ab078f1b7a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": ">=7.1"
+            },
+            "conflict": {
+                "nette/application": "<2.4.1"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "nette/utils": "^3.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-fileinfo": "to use filter |datastream",
+                "ext-mbstring": "to use filters like lower, upper, capitalize, ...",
+                "nette/utils": "to use filter |webalize"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "☕ Latte: the intuitive and fast template engine for those who want the most secure PHP sites. Introduces context-sensitive escaping.",
+            "homepage": "https://latte.nette.org",
+            "keywords": [
+                "context-sensitive",
+                "engine",
+                "escaping",
+                "html",
+                "nette",
+                "security",
+                "template",
+                "twig"
+            ],
+            "time": "2019-09-24T10:42:57+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f35dac526c30aeca6a0018f7b2274a7c34de7c0b"
+                "reference": "ae84612017da1e2052d97229359d7a5bac1b43a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f35dac526c30aeca6a0018f7b2274a7c34de7c0b",
-                "reference": "f35dac526c30aeca6a0018f7b2274a7c34de7c0b",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/ae84612017da1e2052d97229359d7a5bac1b43a6",
+                "reference": "ae84612017da1e2052d97229359d7a5bac1b43a6",
                 "shasum": ""
             },
             "require": {
@@ -1275,7 +1348,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-11-08T06:40:51+00:00"
+            "time": "2019-11-11T17:34:16+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -3219,12 +3292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "9f7b82d1ee98d958de46b453c78739564b477d23"
+                "reference": "d8f1bf9f099852ddd0c009589634ecadb7e4a9d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/9f7b82d1ee98d958de46b453c78739564b477d23",
-                "reference": "9f7b82d1ee98d958de46b453c78739564b477d23",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d8f1bf9f099852ddd0c009589634ecadb7e4a9d8",
+                "reference": "d8f1bf9f099852ddd0c009589634ecadb7e4a9d8",
                 "shasum": ""
             },
             "require": {
@@ -3266,7 +3339,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-09T08:06:17+00:00"
+            "time": "2019-11-11T16:28:28+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -5598,12 +5671,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "521a03f43aa342ce7d6765512cc92241b1186a5c"
+                "reference": "d28774240a63d5db36dd47f21e4365ac57e18d77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/521a03f43aa342ce7d6765512cc92241b1186a5c",
-                "reference": "521a03f43aa342ce7d6765512cc92241b1186a5c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d28774240a63d5db36dd47f21e4365ac57e18d77",
+                "reference": "d28774240a63d5db36dd47f21e4365ac57e18d77",
                 "shasum": ""
             },
             "require": {
@@ -5654,7 +5727,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-11-07T21:14:33+00:00"
+            "time": "2019-11-11T16:57:14+00:00"
         },
         {
             "name": "webmozart/assert",

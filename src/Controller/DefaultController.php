@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController
+class DefaultController extends AbstractController implements IController
 {
     /**
      * @Route("/", name="default")
@@ -18,6 +18,7 @@ class DefaultController extends AbstractController
         $url = $this->generateUrl(
             'lucky_number'
         );
+
         return new Response(
             '<html><body>Lucky default number: '.$number." <a href=\"{$url}\"> url na lucky number</a></body></html>"
         );
