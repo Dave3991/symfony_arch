@@ -46,6 +46,7 @@ class LuckyController extends AbstractController implements IController
     public function getAnotherNumber(): \Symfony\Component\HttpFoundation\Response
     {
         $number = 7;
-        return new Response($this->latteEngine->compile(__DIR__.'/Templates/lucky.latte'));
+        $parameters = ['anyVariable' => 'abcd - anyVariable'];
+        return new Response($this->latteEngine->renderToString(__DIR__.'/Templates/lucky.latte',$parameters));
     }
 }
