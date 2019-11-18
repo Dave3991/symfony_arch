@@ -1,5 +1,9 @@
+{layout $basePath.'/@layout.latte'}
 {block content}
 <div id="banner">
     <h1 n:block=title>Congratulations! {$anyVariable}</h1>
+    <p>
+        this is basePath: {$basePath}
+    </p>
 </div>
 {/block}

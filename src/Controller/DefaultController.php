@@ -3,11 +3,11 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\Base\BaseController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController implements IController
+final class DefaultController extends BaseController implements IController
 {
     /**
      * @Route("/", name="default")

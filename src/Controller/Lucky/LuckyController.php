@@ -3,12 +3,12 @@
 
 namespace App\Controller\Lucky;
 
+use App\Controller\Base\BaseController;
 use App\Controller\IController;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class LuckyController extends AbstractController implements IController
+final class LuckyController extends BaseController implements IController
 {
     /** @var \App\Controller\Lucky\Forms\Example  */
     private $exampleForm;
@@ -46,7 +46,12 @@ class LuckyController extends AbstractController implements IController
     public function getAnotherNumber(): \Symfony\Component\HttpFoundation\Response
     {
         $number = 7;
-        $parameters = ['anyVariable' => 'abcd - anyVariable'];
+        $projectDir = $this->getBasePath();
+        $parameters = [
+            'flashes' => [],
+            'basePath' => $projectDir,
+            'anyVariable' => 'abcd - anyVariable',
+        ];
         return new Response($this->latteEngine->renderToString(__DIR__.'/Templates/lucky.latte',$parameters));
     }
 }
