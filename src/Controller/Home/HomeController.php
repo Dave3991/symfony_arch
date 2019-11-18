@@ -1,13 +1,20 @@
 <?php declare(strict_types=1);
 
 
-namespace App\Controller;
+namespace App\Controller\Home;
 
 use App\Controller\Base\BaseController;
+use App\Controller\IController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class DefaultController extends BaseController implements IController
+/**
+ * Class HomeController
+ * @package App\Controller\Home
+ *
+ * Default controller - first what you see when you come to website
+ */
+final class HomeController extends BaseController implements IController
 {
     /**
      * @Route("/", name="default")
