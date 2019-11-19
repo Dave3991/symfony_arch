@@ -1,4 +1,8 @@
 ##Vocabulary
+why do we have vocabulary ?
+- to ensure everyone knows what used acronyms/abbreviation in our systems stands for.
+
+###Acronyms:
 - class names with postfix **DAO**
     - Data Access Object
       - The functionality of this API is to hide from the application all the complexities involved in performing CRUD (Create, Read, Update, Delete)
