@@ -10,10 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class HomeController
+ * Class ApiController
  * @package App\Controller\Api
  *
- * Default controller - first what you see when you come to website
+ *  If you are going to build huge API use - https://api-platform.com/
  */
 final class ApiController extends BaseController implements IController
 {
