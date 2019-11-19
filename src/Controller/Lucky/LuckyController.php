@@ -46,10 +46,11 @@ final class LuckyController extends BaseController implements IController
     public function getAnotherNumber(): \Symfony\Component\HttpFoundation\Response
     {
         $number = 7;
-        $projectDir = $this->getBasePath();
+        $projectDir = $this->getParameter('kernel.project_dir');
         $parameters = [
             'flashes' => [],
-            'basePath' => $projectDir,
+            'basePath' => $projectDir.'/public',
+            'resourceBasePath' => '',
             'anyVariable' => 'abcd - anyVariable',
         ];
         return new Response($this->latteEngine->renderToString(__DIR__.'/Templates/lucky.latte',$parameters));
