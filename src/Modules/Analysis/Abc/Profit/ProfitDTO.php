@@ -12,10 +12,3 @@ final class ProfitDTO
     private $skuId;
 
 }
-
-/**
- * Etnetera přišla o data -> napočítavat data
- * Etnetera je neschopná
- *
- * Forecast pro různé plid pro různé dodavatele -> virtuály
- */
