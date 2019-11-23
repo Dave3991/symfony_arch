@@ -4,7 +4,7 @@
 namespace App\Modules\Analysis\Abc\Profit;
 
 
-class ProfitDtoCollectionFactory
+final class ProfitDtoCollectionFactory
 {
     public function createProfitDtoCollection(): ProfitDtoCollection
     {

@@ -4,7 +4,9 @@
 namespace App\Modules\Analysis\Abc\Profit;
 
 
-final class ProfitDto implements \JsonSerializable
+use App\Modules\Analysis\Abc\IAbcDto;
+
+final class ProfitDto implements \JsonSerializable, IAbcDto
 {
     /** @var int */
     private $rank;
@@ -25,20 +27,10 @@ final class ProfitDto implements \JsonSerializable
     private $abcSegment;
 
     /**
-     * @var float
-     */
-    private $abcSegmentPercentFrom;
-
-    /**
-     * @var float
-     */
-    private $abcSegmentPercentTo;
-
-    /**
      * kolik % z celku má tato polozka na svedomi
      * @var float
      */
-    private $profitValueRank;
+    private $valueRank;
 
     public function __construct(string $skuId, float $profitValue)
     {
@@ -86,17 +78,21 @@ final class ProfitDto implements \JsonSerializable
     /**
      * @param string $abcSegment
      */
-    public function setAbcSegment(string $abcSegment, float $abcSegmentPercentFrom, float $abcSegmentPercentTo): void
+    public function setAbcSegment(string $abcSegment): void
     {
         $this->abcSegment = $abcSegment;
-        $this->abcSegmentPercentFrom = $abcSegmentPercentFrom;
-        $this->abcSegmentPercentTo = $abcSegmentPercentTo;
     }
 
-    public function setProfitValueRank(float $profitValueRank): void
+    public function setValueRank(float $valueRank): void
     {
-        $this->profitValueRank = $profitValueRank;
+        $this->valueRank = $valueRank;
     }
+
+    public function getValueRank(): float
+    {
+        return $this->valueRank;
+    }
+
 
     public function jsonSerialize(): array
     {

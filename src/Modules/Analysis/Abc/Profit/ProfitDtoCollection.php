@@ -4,7 +4,9 @@
 namespace App\Modules\Analysis\Abc\Profit;
 
 
-class ProfitDtoCollection extends \Doctrine\Common\Collections\ArrayCollection
+use App\Modules\Analysis\Abc\IDtoCollection;
+
+final class ProfitDtoCollection extends \Doctrine\Common\Collections\ArrayCollection implements IDtoCollection
 {
     /** @param \App\Modules\Analysis\Abc\Profit\ProfitDto */
     public function add($element)
@@ -16,8 +18,8 @@ class ProfitDtoCollection extends \Doctrine\Common\Collections\ArrayCollection
     {
         $iterator = $this->getIterator();
         $iterator->uasort(function ($a, $b) {
-            /** @var \App\Modules\Analysis\Abc\Profit\ProfitDtoCollection  $a */
-            /** @var \App\Modules\Analysis\Abc\Profit\ProfitDtoCollection  $b */
+            /** @var \App\Modules\Analysis\Abc\Profit\ProfitDto  $a */
+            /** @var \App\Modules\Analysis\Abc\Profit\ProfitDto $b */
             return ($a->getProfitValue() < $b->getProfitValue()) ? -1 : 1;
         });
         $sortedProfitDtoCollection = new static(\iterator_to_array($iterator));
@@ -54,8 +56,8 @@ class ProfitDtoCollection extends \Doctrine\Common\Collections\ArrayCollection
             $profitValuePercent = $profitDto->getProfitValue()/$profitValueSum;
             if($percentFrom < $profitValuePercent && $profitValuePercent <= $percentTo)
             {
-                $profitDto->setAbcSegment($abcSegment,$percentFrom,$percentTo);
-                $profitDto->setProfitValueRank($profitValuePercent);
+                $profitDto->setAbcSegment($abcSegment);
+                $profitDto->setValueRank($profitValuePercent);
             }
         }
         return $rangedProfitDtoCollecton;

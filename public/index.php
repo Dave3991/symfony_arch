@@ -10,8 +10,8 @@ require dirname(__DIR__).'/config/bootstrap.php';
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
 
-    Debug::enable();
     \Tracy\Debugger::enable(\Tracy\Debugger::DEVELOPMENT,__DIR__ . '/../var/log/');
+    Debug::enable();
 }
 \Tracy\Debugger::$strictMode = true; // display all errors
 

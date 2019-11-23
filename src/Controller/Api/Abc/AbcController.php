@@ -50,4 +50,58 @@ final class AbcController extends BaseController implements IController
         return $jsonResponse;
     }
 
+    /**
+     * @Route("api/v1/abc/sale-frequency", methods={"GET"})
+     */
+    public function saleFrequencyComputeAction(Request $request): \Symfony\Component\HttpFoundation\JsonResponse
+    {
+        $contentInJson = $request->getContent();
+        $data = \json_decode($contentInJson);
+        $data = [
+            "a" => 13,
+            "b" => 10,
+            "c" => 9.001,
+            "d" => 33,
+            "e" => 25,
+            "f" => 23,
+            "g" => 9,
+        ];
+        $result = $this->abcServiceProvider->computeSaleFrequencyFromArray($data);
+        $jsonResponse = new JsonResponse(
+            $result
+        );
+        return $jsonResponse;
+    }
+
+    /**
+     * @Route("api/v1/abc/combine", methods={"GET"})
+     */
+    public function profitSaleFrequencyComputeAction(): \Symfony\Component\HttpFoundation\JsonResponse
+    {
+        $dataA = [
+            "a" => 13,
+            "b" => 10,
+            "c" => 9.001,
+            "d" => 33,
+            "e" => 25,
+            "f" => 23,
+            "g" => 9,
+        ];
+
+        $dataB = [
+            "a" => 13,
+            "b" => 10,
+            "c" => 9.001,
+            "d" => 33,
+            "e" => 25,
+            "f" => 23,
+            "g" => 9,
+        ];
+        $result = $this->abcServiceProvider->computeCombinationProfitSaleFrequency($dataA,$dataB);
+        $jsonResponse = new JsonResponse(
+            $result
+        );
+        return $jsonResponse;
+    }
+
 }
