@@ -9,3 +9,8 @@ why do we have vocabulary ?
 - class names with postfix **DTO**
     - Data Transfer Object
         - is an object that carries data between processes.
+ 
+        
+**SKU**
+- stock keeping unit
+- unit per warehouse (or whatever location)
